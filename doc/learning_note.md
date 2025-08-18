@@ -190,3 +190,54 @@ Please type in your selection
 Press any key to return to the menu...
 ```
 This is definitely not how I wanted to present the data to the user, at all. 
+
+## 18/08/2025 Learning continued
+
+Today's objective is to learn more about using `git` for a personal project like this, and the best practices around it. 
+
+What I've learned so far:
+* Using Source Control feature in VSCode, as an alternative to using command line for git
+* How to use `.gitignore`
+* The best practice in organising a git folder, naming things, writing commit messages, etc. 
+
+### Using Git in VSCode
+
+[This](https://code.visualstudio.com/docs/sourcecontrol/overview) is the official documentation in VSCode
+
+#### Colour scheme
+
+| Color / Decoration  | Meaning                       | Git Equivalent                |
+| ------------------- | ----------------------------- | ----------------------------- |
+| **Green**           | New file, not yet committed   | `git add` / staged            |
+| **Blue**            | Modified file, not yet staged | `git diff` / unstaged changes |
+| **Red**             | Deleted file, not yet staged  | `git rm` / unstaged deletion  |
+| **Orange / Yellow** | Renamed or moved file         | `git mv` / tracked rename     |
+| **Gray**            | Ignored file (`.gitignore`)   | Git is not tracking           |
+| **Plain / White**   | Unmodified, tracked file      | Clean (no changes)            |
+
+#### Symbols
+* M → Modified
+* A → Added / staged
+* D → Deleted
+* U → Unmerged / conflict
+
+### About `.gitignore`
+
+[This](https://git-scm.com/docs/gitignore) is the official documentation. 
+
+In a project like this, there are personal notes, or experimental files. They should be excluded from the tracking of git. ChatGPT recommended putting experimental codes in a `scratch/` folder.
+
+### Best Practices
+
+* `doc/` folder for documentations, like this
+* `src/` folder for source codes
+* Use imperivatives, for example, 'add feature A', rather than 'adding feature A', or 'added feature A'
+
+The following could also be a good way to organise files, in the case where there are not multiple documents for notes.
+```css
+my-project/
+  ├── src/
+  ├── .gitignore
+  ├── README.md
+  └── NOTES.md
+```
