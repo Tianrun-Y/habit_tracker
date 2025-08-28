@@ -3,7 +3,7 @@ import os
 from datetime import date
 # Here, as per Python style guides, import of packeges stat at the very top of a script
 
-DATA_FILE = "sample.json"
+DATA_FILE = "data/habits.json"
 # Here, this is a well-established idiom
 # And, it follows the stylish convention of using capitalised letters for a constant
 # This makes it easy to change file paths, as it can be done only once here, not every place in the code where the path appears
@@ -24,7 +24,7 @@ def load_data():
         with open(DATA_FILE, "r") as f:
             return json.load(f)
     else:
-        return {"habits": []}
+        return {}
         # This creates an empty dictionary
     
 def save_habits(habits):
@@ -35,7 +35,7 @@ def view_habits(habits):
     print("The following are your current habits!")
     i = 1
     for habit in habits:
-        print(str(i) + ".", habit["name"])
+        print(str(i) + "." + habit["name"])
         i = i + 1
 
 def add_habit():
@@ -82,9 +82,12 @@ def main():
     while True:
         choice = display_menu()
         if choice == "1":
-            view_habits(habits)
+            if habits == {}:
+                print("You currently do not have any habits tracked!")
+            else:
+                view_habits(habits)
         elif choice == "2":
-            habits.append(add_habit())
+            habits.update(add_habit())
             print("habit added successfully!")
         elif choice == "3":
             completed, incompleted = check_habits(habits)
