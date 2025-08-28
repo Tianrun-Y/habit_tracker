@@ -87,7 +87,7 @@ def main():
             else:
                 view_habits(habits)
         elif choice == "2":
-            habits.update(add_habit())
+            habits.append(add_habit())
             print("habit added successfully!")
         elif choice == "3":
             completed, incompleted = check_habits(habits)
