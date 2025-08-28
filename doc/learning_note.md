@@ -241,3 +241,20 @@ my-project/
   ├── README.md
   └── NOTES.md
 ```
+## 28/08/2025 The continuation
+
+The progress on this project took a pause, since I spent the entire week last week learning to build a website, and finally I have a website! 
+
+Now, the goal is still to make a first publishable version of the most basic features, add into error handling and enhanced user experiences. 
+
+### Where to put the json file?
+It appears putting it in a seperate folder works the best! And currently the programme can handle the cases: 1) no `habits.json` file -- create one; 2) `habits.json` file consisting of no objects -- when used view habits print a message rather than nothing; 3) `habits.json` file exists and has content -- all good!
+
+### The question, or chanllenge?
+How does one keep enough notes for oneself, such that when one comes back to the project after a gap, one can pick it up where it was finished last time? Today for example, I found errors in the code which I did not fix last time, but I had no idea, and diagnosing perhaps took longer than it should because of this. Learning needed!
+
+### Problem
+A problem arised when trying to deal with the empty data file. I wanted it to stay there on github as an empty file, but I also want git to stop tracking my local file. Still trying to find a solution, unfixed still. 
+
+### TOMORROW
+Tomorrow! I should try to fix the above problems, and start to write a README.md file. Hopefully, this project will be publishable by the end of tomorrow.
