@@ -14,7 +14,8 @@ def display_menu():
     print("2. Add a habit")
     print("3. List current habit status")
     print("4. Mark a habit as done")
-    print("5. quit")
+    print("5. Check the dates of completion of a habit")
+    print("6. Save and quit")
     print("\n")
     choice = input("Please type in your selection \n")
     return choice
@@ -35,7 +36,7 @@ def view_habits(habits):
     print("The following are your current habits!")
     i = 1
     for habit in habits:
-        print(str(i) + "." + habit["name"])
+        print(str(i) + ". " + habit["name"])
         i = i + 1
 
 def add_habit():
@@ -75,7 +76,34 @@ def check_habits(habits):
             completed.append(habit["name"])
         else:
             incompleted.append(habit["name"])
-    return completed, incompleted
+    print("Completed task:")
+    if completed == []:
+        print("You haven't completed any habits yet. Start tracking them now!")
+    i = 1
+    for habit in completed:
+        print(str(i) + ". " + habit)
+        i = i + 1
+    print("\nNot yet completed task:")
+    if incompleted == []:
+        print("You've completed all your habits!")
+    i = 1
+    for habit in incompleted:
+        print(str(i) + ". " + habit)
+        i = i + 1
+
+def check_dates(inquired_habit, habits):
+    exist = False
+    for habit in habits:
+        if habit["name"] == inquired_habit:
+            exist = True
+            i = 1
+            for date in habit["dates_of_completion"]:
+                print(str(i) + ". " + date)
+                i = i + 1
+            break
+    if exist == False:
+        print("Please type in an existing habit \n")
+    
 
 def main():
     habits = load_data()
@@ -90,13 +118,14 @@ def main():
             habits.append(add_habit())
             print("habit added successfully!")
         elif choice == "3":
-            completed, incompleted = check_habits(habits)
-            print("Completed task:", completed)
-            print("Not yet completed task:", incompleted)
+            check_habits(habits)          
         elif choice == "4":
             finished_habit = input("Please type in the habit you finished today! \n")
             habits = mark_habit(habits, finished_habit)
         elif choice == "5":
+            inquired_habit = input("Please type in the habit want to see the dates of completion! \n")
+            check_dates(inquired_habit, habits)
+        elif choice == "6":
             print(" \n Habits saved successfully!")
             print(" \n Goodbye \n")
             save_habits(habits)
