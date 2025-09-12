@@ -241,7 +241,7 @@ my-project/
   ├── README.md
   └── NOTES.md
 ```
-## 28/08/2025 The continuation
+## 28/08/2025 The continuation
 
 The progress on this project took a pause, since I spent the entire week last week learning to build a website, and finally I have a website! 
 
@@ -258,3 +258,29 @@ A problem arised when trying to deal with the empty data file. I wanted it to st
 
 ### TOMORROW
 Tomorrow! I should try to fix the above problems, and start to write a README.md file. Hopefully, this project will be publishable by the end of tomorrow.
+
+## 03/09/2025 The actually tomorrow
+
+I did not remember that I had to work on the 29th of August. Now, after 6 days, I am back at the project.
+
+## 05/09/2025 The return
+
+### New feature added!
+I added another feature which I considered essential. This new feature allows the user to type in the name of an exising habit, and the terminal will list all the dates where this habit is completed on that date.
+
+### Future feature idea
+Currently, this programme works the best if there is only a small amount of habits, and they are tracked over a short period of time. However, I was thinking that a good feature for the future is to export a calender, perhaps in the form of a pdf document, so that the user can easily see all the dates where one habit is marked as complete. 
+
+### Next step
+Write a README.md file! It does not need to be perfect, fun, or detailed. But, it must be done according to the best practices.
+
+## 12/09/2025 README
+
+The main objective today is to write a README document.
+
+For the future blog:
+The project exists because I, a novice in the field of software engineering, decided that I needed some more hand-on experiences building a project from start to finish. I chose to build a command-line programme because of my experiences in Python and a research software called GAP. This would be more appropriate than, say, a web app using JavaScript. The topic itself, not exactly exciting, was an option offered by ChatGPT, but I was very clear that the sole purpose of building this project was for me to learn. In the future, having completed more similar projects like this, I can hopefully step into the more original creations.
+
+### "Programme" vs "Software"
+
+I am calling this project a programme because of its scale. It can be run with a single python script, and is indeed written in this way.
