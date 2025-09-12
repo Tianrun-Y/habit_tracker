@@ -12,7 +12,7 @@ def display_menu():
     print("\n ---menu--- \n")
     print("1. View habits")
     print("2. Add a habit")
-    print("3. List current habit status")
+    print("3. List current habits status")
     print("4. Mark a habit as done")
     print("5. Check the dates of completion of a habit")
     print("6. Save and quit")
