@@ -5,7 +5,19 @@ Habit Tracker CLI is a simple command-line habit tracker written in Python.
 See my personal homepage
 
 ## Installation
-TODO
+
+We recommend two ways to install this programme on your local computer.
+
+1. Clone this repo (recommended for developers)
+
+```bash
+git clone https://github.com/your-username/habit-tracker.git
+cd habit-tracker
+```
+
+2. Download the project folder as a zip file, from Github.
+
+
 
 ## Usage
 
@@ -51,3 +63,9 @@ Press any key to return to the menu...
 ```
 
 After performing actions such as adding a habit and marking a habit, the user can save the changes by choosing option 6. The data will be saved locally, and will be loaded when the programme is next run.
+
+## Limitations
+
+1. The programme in its current version does not support removing a tracked habit. If the user is comfortable with editing `.json` files, the user can remove a habit by deleting the corresponding `json` object from the data file.
+
+2. Due to the nature of a command-line interface programme, the user experience is the best when the number of habits being tracked does not exceed a couple of dozens, but that should not be a problem as one should not have to track that many habits every day! However, the current way of displaying dates of completetion is not ideal for users to track over a long period of time, say, more than a few months. In the future, perhaps we can add a feature that allows users to export their data into a calender view, for better user experience. 
